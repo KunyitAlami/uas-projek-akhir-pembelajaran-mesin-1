@@ -159,7 +159,7 @@ Penelitian menerapkan metode XAI untuk meningkatkan interpretabilitas model:
 
 ---
 
-## 📁 Struktur Proyek
+<!-- ## 📁 Struktur Proyek
 
 ```
 📦 klasifikasi-stopkontak/
@@ -176,7 +176,7 @@ Penelitian menerapkan metode XAI untuk meningkatkan interpretabilitas model:
 └── 📄 README.md
 ```
 
----
+--- -->
 
 ## 📝 Kesimpulan
 
@@ -200,11 +200,11 @@ Penelitian menerapkan metode XAI untuk meningkatkan interpretabilitas model:
 
 ## 🔗 Link
 
-| Sumber               | URL                                                                      |
-| -------------------- | ------------------------------------------------------------------------ |
-| 📁 GitHub Repository | https://github.com/KunyitAlami/uas-projek-akhir-pembelajaran-mesin-1.git |
-| 🗃️ Dataset Roboflow  | https://app.roboflow.com/ghanis-workspace-cjm94/coba-projek-uas/1        |
-| 🖥️ Demo Streamlit    | [Isi link aplikasi]                                                      |
+| Sumber                    | URL                                                                                  |
+| ------------------------- | ------------------------------------------------------------------------------------ |
+| 📁 GitHub Repository      | https://github.com/KunyitAlami/uas-projek-akhir-pembelajaran-mesin-1.git             |
+| 🗃️ Dataset yang digunakan | https://drive.google.com/drive/folders/1kOKXmAmSZxPE05PqWadFae6__53hwlFE?usp=sharing |
+| 🖥️ Demo Streamlit         | [Isi link aplikasi]                                                                  |
 
 ---
 
