@@ -132,7 +132,7 @@ Menggunakan library **Albumentations** dengan teknik berikut:
 | Precision | 97,17%     |
 | Recall    | 97,13%     |
 | F1-Score  | 97,14%     |
-| Accuracy  | **97.73%** |
+| Accuracy  | **97.13%** |
 
 ---
 
