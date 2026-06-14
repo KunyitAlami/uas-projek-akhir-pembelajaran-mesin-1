@@ -12,8 +12,8 @@ Perbandingan performa metode **Machine Learning** dan **Deep Learning** dalam kl
 - [Hasil]
 - [Explainable AI (XAI)]
 - [Tools & Framework]
-- [Kesimpulan](#kesimpulan)
-- [Author](#author)
+- [Kesimpulan]
+- [Author]
 
 ---
 
