@@ -6,16 +6,14 @@ Perbandingan performa metode **Machine Learning** dan **Deep Learning** dalam kl
 
 ## 📋 Daftar Isi
 
-- [Deskripsi Proyek](#deskripsi-proyek)
-- [Dataset](#dataset)
-- [Metodologi](#metodologi)
-- [Hasil](#hasil)
-- [Explainable AI (XAI)](#explainable-ai-xai)
-- [Tools & Framework](#tools--framework)
-- [Struktur Proyek](#struktur-proyek)
+- [Deskripsi Proyek]
+- [Dataset]
+- [Metodologi]
+- [Hasil]
+- [Explainable AI (XAI)]
+- [Tools & Framework]
 - [Kesimpulan](#kesimpulan)
 - [Author](#author)
-- [Referensi](#referensi)
 
 ---
 
