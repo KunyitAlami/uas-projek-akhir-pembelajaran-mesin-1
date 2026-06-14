@@ -21,11 +21,11 @@ Perbandingan performa metode **Machine Learning** dan **Deep Learning** dalam kl
 
 Proyek ini membandingkan performa beberapa metode klasifikasi citra dalam mendeteksi kondisi stopkontak listrik. Terdapat **tiga kelas** yang diklasifikasikan:
 
-| Kelas     | Deskripsi                                          |
-| --------- | -------------------------------------------------- |
-| 🟢 Kosong | Stopkontak dalam kondisi kosong (tidak ada steker) |
-| 🟡 Terisi | Stopkontak terisi sebagian                         |
-| 🔴 Penuh  | Stopkontak terisi penuh                            |
+| Kelas  | Deskripsi                                          |
+| ------ | -------------------------------------------------- |
+| Kosong | Stopkontak dalam kondisi kosong (tidak ada steker) |
+| Terisi | Stopkontak terisi sebagian                         |
+| Penuh  | Stopkontak terisi penuh                            |
 
 ### Model yang Dibandingkan
 
@@ -110,7 +110,7 @@ Menggunakan library **Albumentations** dengan teknik berikut:
 | Model                | Kategori         | Accuracy / mAP@0.5 |
 | -------------------- | ---------------- | ------------------ |
 | SVM + HOG            | Machine Learning | 81.37%             |
-| EfficientNetB0 + SVM | Machine Learning | 97.73%             |
+| EfficientNetB0 + SVM | Machine Learning | **97.73%** 🥈      |
 | EfficientNetB0       | Deep Learning    | 97.33%             |
 | EfficientNetV2B0     | Deep Learning    | 95.64%             |
 | YOLOv5s              | Deep Learning    | **99.40%** ⭐      |
@@ -124,6 +124,15 @@ Menggunakan library **Albumentations** dengan teknik berikut:
 | Recall       | 98.7%     |
 | mAP@0.5      | **99.4%** |
 | mAP@0.5:0.95 | 96.2%     |
+
+### 🏆 Model Terbaik Kedua untuk Machine Learning: EfficientNttB0 + SVM
+
+| Metrik    | Nilai      |
+| --------- | ---------- |
+| Precision | 97,17%     |
+| Recall    | 97,13%     |
+| F1-Score  | 97,14%     |
+| Accuracy  | **97.73%** |
 
 ---
 
@@ -180,7 +189,7 @@ Penelitian menerapkan metode XAI untuk meningkatkan interpretabilitas model:
 
 - Model **Deep Learning** secara konsisten mengungguli metode **Machine Learning konvensional** pada tugas klasifikasi kondisi stopkontak listrik.
 - **YOLOv5s** meraih performa terbaik secara keseluruhan dengan **mAP@0.5 sebesar 99.4%**.
-- **EfficientNetB0 + SVM** menjadi model klasifikasi terbaik di kategori hybrid dengan **akurasi 97.73%**.
+- **EfficientNetB0 + SVM** menjadi model klasifikasi machine learning terbaik di kategori hybrid dengan **akurasi 97.13%**.
 - Transfer Learning terbukti efektif meski dataset relatif kecil sebelum augmentasi.
 
 ---
