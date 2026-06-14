@@ -23,19 +23,21 @@ Perbandingan performa metode **Machine Learning** dan **Deep Learning** dalam kl
 
 Proyek ini membandingkan performa beberapa metode klasifikasi citra dalam mendeteksi kondisi stopkontak listrik. Terdapat **tiga kelas** yang diklasifikasikan:
 
-| Kelas | Deskripsi |
-|-------|-----------|
+| Kelas     | Deskripsi                                          |
+| --------- | -------------------------------------------------- |
 | 🟢 Kosong | Stopkontak dalam kondisi kosong (tidak ada steker) |
-| 🟡 Terisi | Stopkontak terisi sebagian |
-| 🔴 Penuh | Stopkontak terisi penuh |
+| 🟡 Terisi | Stopkontak terisi sebagian                         |
+| 🔴 Penuh  | Stopkontak terisi penuh                            |
 
 ### Model yang Dibandingkan
 
 **Machine Learning**
+
 - SVM + HOG
 - EfficientNetB0 + SVM
 
 **Deep Learning**
+
 - EfficientNetB0
 - EfficientNetV2B0
 - YOLOv5s
@@ -47,10 +49,10 @@ Proyek ini membandingkan performa beberapa metode klasifikasi citra dalam mendet
 
 Dataset dikumpulkan secara mandiri berupa citra kondisi stopkontak listrik.
 
-| Keterangan | Detail |
-|------------|--------|
-| Data awal | 510 gambar |
-| Setelah augmentasi | 7.500 gambar |
+| Keterangan           | Detail       |
+| -------------------- | ------------ |
+| Data awal            | 510 gambar   |
+| Setelah augmentasi   | 7.500 gambar |
 | Distribusi per kelas | 2.500 gambar |
 
 ### Teknik Augmentasi Data
@@ -70,29 +72,35 @@ Menggunakan library **Albumentations** dengan teknik berikut:
 ## 🧪 Metodologi
 
 ### 1. SVM + HOG
+
 - Ekstraksi fitur menggunakan **Histogram of Oriented Gradients (HOG)**
 - Klasifikasi menggunakan **Support Vector Machine (SVM)**
 - Hyperparameter tuning dengan **GridSearchCV**
 - Evaluasi menggunakan **Stratified 5-Fold Cross Validation**
 
 ### 2. EfficientNetB0 + SVM
+
 - **EfficientNetB0** sebagai feature extractor (Transfer Learning dari bobot ImageNet)
 - **SVM** sebagai classifier
 
 ### 3. EfficientNetB0
+
 - Transfer Learning dengan fine-tuning pada classifier layer
 - Interpretabilitas menggunakan **Grad-CAM**
 
 ### 4. EfficientNetV2B0
+
 - Transfer Learning dengan Global Average Pooling
 - Interpretabilitas menggunakan **Grad-CAM**
 
 ### 5. YOLOv5s
+
 - Transfer Learning
 - Evaluasi: Precision, Recall, mAP@0.5, mAP@0.5:0.95
 - Interpretabilitas menggunakan **LIME**
 
 ### 6. YOLOv11s
+
 - 5-Fold Cross Validation
 - Evaluasi: Precision, Recall, mAP@0.5, mAP@0.5:0.95
 - Interpretabilitas menggunakan **LIME**
@@ -101,23 +109,23 @@ Menggunakan library **Albumentations** dengan teknik berikut:
 
 ## 📊 Hasil
 
-| Model | Kategori | Accuracy / mAP@0.5 |
-|-------|----------|-------------------|
-| SVM + HOG | Machine Learning | 81.37% |
-| EfficientNetB0 + SVM | Machine Learning | 97.73% |
-| EfficientNetB0 | Deep Learning | 97.33% |
-| EfficientNetV2B0 | Deep Learning | 95.64% |
-| YOLOv5s | Deep Learning | **99.40%** ⭐ |
-| YOLOv11s | Deep Learning | 99.03% |
+| Model                | Kategori         | Accuracy / mAP@0.5 |
+| -------------------- | ---------------- | ------------------ |
+| SVM + HOG            | Machine Learning | 81.37%             |
+| EfficientNetB0 + SVM | Machine Learning | 97.73%             |
+| EfficientNetB0       | Deep Learning    | 97.33%             |
+| EfficientNetV2B0     | Deep Learning    | 95.64%             |
+| YOLOv5s              | Deep Learning    | **99.40%** ⭐      |
+| YOLOv11s             | Deep Learning    | 99.03%             |
 
 ### 🏆 Model Terbaik: YOLOv5s
 
-| Metrik | Nilai |
-|--------|-------|
-| Precision | 97.9% |
-| Recall | 98.7% |
-| mAP@0.5 | **99.4%** |
-| mAP@0.5:0.95 | 96.2% |
+| Metrik       | Nilai     |
+| ------------ | --------- |
+| Precision    | 97.9%     |
+| Recall       | 98.7%     |
+| mAP@0.5      | **99.4%** |
+| mAP@0.5:0.95 | 96.2%     |
 
 ---
 
@@ -125,11 +133,11 @@ Menggunakan library **Albumentations** dengan teknik berikut:
 
 Penelitian menerapkan metode XAI untuk meningkatkan interpretabilitas model:
 
-| Metode | Digunakan pada |
-|--------|---------------|
-| **Feature Importance** | EfficientNetB0 + SVM |
-| **Grad-CAM** | EfficientNetB0, EfficientNetV2B0 |
-| **LIME** | YOLOv5s, YOLOv11s |
+| Metode                 | Digunakan pada                   |
+| ---------------------- | -------------------------------- |
+| **Feature Importance** | EfficientNetB0 + SVM             |
+| **Grad-CAM**           | EfficientNetB0, EfficientNetV2B0 |
+| **LIME**               | YOLOv5s, YOLOv11s                |
 
 > Hasil visualisasi menunjukkan bahwa model berfokus pada area **stopkontak, steker, adaptor, dan kabel** saat melakukan klasifikasi.
 
@@ -137,22 +145,17 @@ Penelitian menerapkan metode XAI untuk meningkatkan interpretabilitas model:
 
 ## 🛠️ Tools & Framework
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat&logo=tensorflow&logoColor=white)
-![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat&logo=opencv&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=streamlit&logoColor=white)
-
-| Tool | Kegunaan |
-|------|----------|
-| Python | Bahasa pemrograman utama |
-| Scikit-Learn | SVM, GridSearchCV, evaluasi |
-| TensorFlow / Keras | EfficientNet models |
-| Ultralytics YOLO | YOLOv5s & YOLOv11s |
-| OpenCV | Pemrosesan citra |
-| Albumentations | Augmentasi data |
-| Roboflow | Manajemen dataset |
-| Google Colab | Lingkungan pelatihan model |
-| Streamlit | Aplikasi demo interaktif |
+| Tool               | Kegunaan                    |
+| ------------------ | --------------------------- |
+| Python             | Bahasa pemrograman utama    |
+| Scikit-Learn       | SVM, GridSearchCV, evaluasi |
+| TensorFlow / Keras | EfficientNet models         |
+| Ultralytics YOLO   | YOLOv5s & YOLOv11s          |
+| OpenCV             | Pemrosesan citra            |
+| Albumentations     | Augmentasi data             |
+| Roboflow           | Manajemen dataset           |
+| Google Colab       | Lingkungan pelatihan model  |
+| Streamlit          | Aplikasi demo interaktif    |
 
 ---
 
@@ -187,6 +190,7 @@ Penelitian menerapkan metode XAI untuk meningkatkan interpretabilitas model:
 ## 👤 Author
 
 **Ghani Mudzakir**
+
 - NIM: `2310817110011`
 - Program Studi: Teknologi Informasi
 - Fakultas: Teknik
@@ -196,25 +200,14 @@ Penelitian menerapkan metode XAI untuk meningkatkan interpretabilitas model:
 
 ## 🔗 Link
 
-| Sumber | URL |
-|--------|-----|
-| 📁 GitHub Repository | [Isi link repository] |
-| 🗃️ Dataset Roboflow | [Isi link dataset] |
-| 🖥️ Demo Streamlit | [Isi link aplikasi] |
-
----
-
-## 📚 Referensi
-
-- Basthikodi et al. (2024)
-- Celik & Inik (2024)
-- Sabir & Mehmood (2024)
-- Giraldo-Roldán et al. (2026)
-- Lee et al. (2024)
-- Aftab et al. (2026)
+| Sumber               | URL                                                                      |
+| -------------------- | ------------------------------------------------------------------------ |
+| 📁 GitHub Repository | https://github.com/KunyitAlami/uas-projek-akhir-pembelajaran-mesin-1.git |
+| 🗃️ Dataset Roboflow  | https://app.roboflow.com/ghanis-workspace-cjm94/coba-projek-uas/1        |
+| 🖥️ Demo Streamlit    | [Isi link aplikasi]                                                      |
 
 ---
 
 <p align="center">
-  Made with ❤️ by Ghani Mudzakir · Universitas Lambung Mangkurat
+  Ghani Mudzakir · Universitas Lambung Mangkurat (Juni, 2026)
 </p>
