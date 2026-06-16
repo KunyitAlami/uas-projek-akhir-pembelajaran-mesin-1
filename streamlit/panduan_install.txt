@@ -1,0 +1,116 @@
+ALUR MENJALANKAN PROYEK
+
+1. Clone repository
+
+git clone https://github.com/KunyitAlami/uas-projek-akhir-pembelajaran-mesin-1.git
+
+atau download file ZIP kemudian ekstrak ke folder lokal.
+
+---
+
+2. Masuk ke folder proyek
+
+cd streamlit
+
+---
+
+3. Buat virtual environment (opsional tetapi disarankan)
+
+Windows:
+
+python -m venv venv
+
+venv\Scripts\activate
+
+---
+
+4. Install seluruh dependency
+
+pip install -r requirements.txt
+
+---
+
+5. Clone repository YOLOv5
+
+git clone https://github.com/ultralytics/yolov5.git
+
+---
+
+6. Install dependency YOLOv5
+
+cd yolov5
+
+pip install -r requirements.txt
+
+cd ..
+
+---
+
+7. Pastikan struktur folder seperti berikut
+
+streamlit/
+│
+├── app.py
+├── best.pt
+├── FIX-efficientnetb0-svm_model.pkl
+├── FIX-efficientnetb0-svm-label_encoder.pkl
+├── requirements.txt
+├── yolov5/
+│
+└── sample/
+
+---
+
+8. Jalankan aplikasi
+
+python -m streamlit run app.py
+
+---
+
+9. Buka aplikasi melalui browser melalui localhost
+
+---
+
+10. Cara menggunakan aplikasi
+
+a. Pilih model:
+
+* EfficientNetB0 + SVM
+* YOLOv5s
+
+b. Upload gambar stopkontak atau gunakan kamera.
+
+c. Tunggu proses prediksi selesai.
+
+d. Sistem akan menampilkan:
+
+* Kelas prediksi
+* Nilai confidence
+* Confidence setiap kelas
+
+---
+
+CATATAN
+
+Apabila model YOLOv5 tidak dapat dimuat pada Windows karena error PosixPath, gunakan patch berikut sebelum memanggil torch.hub.load():
+
+import pathlib
+
+temp = pathlib.PosixPath
+pathlib.PosixPath = pathlib.WindowsPath
+
+# load model
+
+pathlib.PosixPath = temp
+
+---
+
+VERSI DEPENDENCY YANG DIGUNAKAN
+
+Python            : 3.12
+NumPy             : 1.26.4
+OpenCV            : 4.10.0.84
+Scikit-Learn      : 1.6.1
+TensorFlow        : sesuai requirements.txt
+PyTorch           : 2.12.0+cpu
+Streamlit         : sesuai requirements.txt

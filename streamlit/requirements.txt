@@ -1,0 +1,17 @@
+streamlit
+numpy==1.26.4
+pillow
+tensorflow
+scikit-learn==1.6.1
+joblib
+torch
+torchvision
+opencv-python==4.10.0.84
+pandas
+matplotlib
+seaborn
+PyYAML
+requests
+tqdm
+scipy
+ultralytics

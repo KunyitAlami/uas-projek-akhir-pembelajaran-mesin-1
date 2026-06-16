@@ -210,8 +210,7 @@ Penelitian menerapkan metode XAI untuk meningkatkan interpretabilitas model:
 | Sumber                    | URL                                                                                  |
 | ------------------------- | ------------------------------------------------------------------------------------ |
 | 📁 GitHub Repository      | https://github.com/KunyitAlami/uas-projek-akhir-pembelajaran-mesin-1.git             |
-| 🗃️ Dataset yang digunakan | https://drive.google.com/drive/folders/1kOKXmAmSZxPE05PqWadFae6__53hwlFE?usp=sharing |
-| 🖥️ Demo Streamlit         | [Isi link aplikasi]                                                                  |
+| 🗃️ Dataset yang digunakan | https://drive.google.com/drive/folders/1kOKXmAmSZxPE05PqWadFae6__53hwlFE?usp=sharing |                                                             |
 
 ---
 
